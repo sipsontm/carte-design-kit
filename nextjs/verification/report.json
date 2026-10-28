@@ -1,0 +1,188 @@
+{
+  "checkedAt": "2026-10-08T16:41:28.474Z",
+  "browser": "154.0.8037.98",
+  "results": [
+    {
+      "name": "Original layout measurements and local font",
+      "status": "passed",
+      "details": {
+        "canvas": {
+          "x": 452,
+          "y": 132.75,
+          "width": 1280,
+          "height": 1166.109375
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 264,
+          "height": 1330.859375
+        },
+        "kpi": {
+          "x": 452,
+          "y": 132.75,
+          "width": 308,
+          "height": 142.546875
+        },
+        "chart": {
+          "x": 452,
+          "y": 291.296875,
+          "width": 761.59375,
+          "height": 354.28125
+        },
+        "gap": "16px",
+        "kpiPadding": "20px",
+        "chartPadding": "24px",
+        "kpiNumberMargin": "10px",
+        "chartSubtitleMargin": "8px",
+        "radius": "12px",
+        "font": "\"Hanken Grotesk\", Arial, sans-serif",
+        "fontLoaded": true
+      }
+    },
+    {
+      "name": "Original metric explainer popover",
+      "status": "passed"
+    },
+    {
+      "name": "All 11 page templates render",
+      "status": "passed"
+    },
+    {
+      "name": "Project create, search and edit",
+      "status": "passed"
+    },
+    {
+      "name": "Project persists across reload",
+      "status": "passed"
+    },
+    {
+      "name": "CSV export contains filtered records",
+      "status": "passed"
+    },
+    {
+      "name": "Bulk delete requires confirmation and supports cancellation",
+      "status": "passed"
+    },
+    {
+      "name": "Pagination, status filter and sort",
+      "status": "passed"
+    },
+    {
+      "name": "Board move, detail navigation and task persistence",
+      "status": "passed"
+    },
+    {
+      "name": "Calendar month navigation and event create/edit/delete",
+      "status": "passed"
+    },
+    {
+      "name": "Settings fields and switches persist",
+      "status": "passed"
+    },
+    {
+      "name": "Demo plan change and labeled receipt download",
+      "status": "passed"
+    },
+    {
+      "name": "Component states, retry, dialog focus trap, Escape and focus return",
+      "status": "passed"
+    },
+    {
+      "name": "Drawer notifications and toast",
+      "status": "passed"
+    },
+    {
+      "name": "Clearly labeled local AI-interface explainer",
+      "status": "passed"
+    },
+    {
+      "name": "Analytics period changes sample aggregates",
+      "status": "passed"
+    },
+    {
+      "name": "Sign-in validation and simulated success",
+      "status": "passed"
+    },
+    {
+      "name": "Documentation download links",
+      "status": "passed"
+    },
+    {
+      "name": "Confirmed local demo reset",
+      "status": "passed"
+    },
+    {
+      "name": "Dark mode persists and renders",
+      "status": "passed"
+    },
+    {
+      "name": "All 11 routes have no document overflow at 1920, 1440, 768, 390 and 320px",
+      "status": "passed"
+    },
+    {
+      "name": "Native direct routes, dynamic project URL, refresh, browser back, keyboard tabs and 404 response",
+      "status": "passed"
+    },
+    {
+      "name": "Global search survives native client navigation",
+      "status": "passed"
+    },
+    {
+      "name": "No uncaught browser errors or external network requests",
+      "status": "passed"
+    },
+    {
+      "name": "Original CSS and 10 presentation components are byte-identical snapshots",
+      "status": "passed",
+      "details": [
+        {
+          "file": "components/charts/StatCard.tsx",
+          "sha256": "096414620e473d5e101640ce8b7de17e93b45fb414231c0864294826fca6f203"
+        },
+        {
+          "file": "components/charts/ChartCard.tsx",
+          "sha256": "489436bf40bebe7669619de15c7369c7be31396294ef86c6ba4d7edb7b788f4f"
+        },
+        {
+          "file": "components/charts/TrendArea.tsx",
+          "sha256": "1c59aa6e30b3d2753f477cd298706f68704563a8c75180df621299f8fff249a7"
+        },
+        {
+          "file": "components/charts/VerticalBars.tsx",
+          "sha256": "70a52b92e151bf90d9fd76da018188da1a6f34a08bf3bcfb8b49fe4743d1ac14"
+        },
+        {
+          "file": "components/charts/BarList.tsx",
+          "sha256": "22b52b925bc45c09b64a2dd9b710aa3aee8d964c0afdb2a94069299a66dbb5ac"
+        },
+        {
+          "file": "components/charts/DonutChart.tsx",
+          "sha256": "8cbe9b8a799a00e06188f3bb8ef1fe65682788903418439ee0b610362eea275c"
+        },
+        {
+          "file": "components/charts/EmptyState.tsx",
+          "sha256": "567fd01c944b9f011957ea249f65e960b844b3abd663b572091c3e46bf7dabe2"
+        },
+        {
+          "file": "components/ui/card.tsx",
+          "sha256": "182956bd0fe55f6eb6fee2006124865ce10478fa136b5539fa95fe289cc0c68f"
+        },
+        {
+          "file": "components/ui/popover.tsx",
+          "sha256": "67aa5f28d07c6b149d9d30d173af78d6640f9bca18138bfb16b98e66973974b9"
+        },
+        {
+          "file": "components/explainer/MetricInfo.tsx",
+          "sha256": "e2cb6b9255d86d508744929dbed7ceac96a419b6b664f46d09d8d8607c22a7d6"
+        },
+        {
+          "file": "app/globals.css",
+          "sha256": "55258efb0c5fb4d57803444bc64e51003c4d13c22d7b669ac3b602ac4de7f724"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "externalRequests": []
+}

@@ -1,0 +1,14 @@
+**/node_modules/
+**/.next/
+**/.git/
+**/.env
+**/.env.*
+!**/.env.example
+**/*.pem
+**/*.key
+**/*.tsbuildinfo
+**/failure.json
+**/playwright-report/
+**/test-results/
+*.zip
+.DS_Store

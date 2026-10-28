@@ -1,0 +1,221 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/* "Crisp / utilitarian / cool grays" — tokens lifted from the Carte mockup.
+   Cool near-black ink, cool gray secondaries, hairline borders, flat surfaces
+   (no shadows anywhere), tight radii. */
+:root {
+  --background: #ffffff;
+  --foreground: #13161a;
+  --card: #ffffff;
+  --card-foreground: #13161a;
+  --popover: #ffffff;
+  --popover-foreground: #13161a;
+  --primary: #13161a;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f3f5;
+  --secondary-foreground: #13161a;
+  --muted: #f1f3f5;
+  --muted-foreground: #8b919a;
+  --accent: #f1f3f5;
+  --accent-foreground: #13161a;
+  --destructive: #b23b3b;
+  --border: #e7e9ec;
+  --input: #e7e9ec;
+  --ring: #c4cad1;
+  --chart-1: #13161a;
+  --chart-2: #363d47;
+  --chart-3: #5b626b;
+  --chart-4: #838a93;
+  --chart-5: #a9b0b8;
+  --radius: 0.75rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #13161a;
+  --sidebar-primary: #13161a;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f1f3f5;
+  --sidebar-accent-foreground: #13161a;
+  --sidebar-border: #e7e9ec;
+  --sidebar-ring: #c4cad1;
+}
+
+.dark {
+  --background: #16191d;
+  --foreground: #f7f8f9;
+  --card: #16191d;
+  --card-foreground: #f7f8f9;
+  --popover: #1b1f24;
+  --popover-foreground: #f7f8f9;
+  --primary: #f7f8f9;
+  --primary-foreground: #13161a;
+  --secondary: #22262c;
+  --secondary-foreground: #f7f8f9;
+  --muted: #22262c;
+  --muted-foreground: #8b919a;
+  --accent: #22262c;
+  --accent-foreground: #f7f8f9;
+  --destructive: #e08585;
+  --border: #272c33;
+  --input: #272c33;
+  --ring: #5b626b;
+  --chart-1: #f7f8f9;
+  --chart-2: #d7dbe0;
+  --chart-3: #b4bbc3;
+  --chart-4: #939aa3;
+  --chart-5: #747b85;
+  --sidebar: #16191d;
+  --sidebar-foreground: #f7f8f9;
+  --sidebar-primary: #f7f8f9;
+  --sidebar-primary-foreground: #13161a;
+  --sidebar-accent: #22262c;
+  --sidebar-accent-foreground: #f7f8f9;
+  --sidebar-border: #272c33;
+  --sidebar-ring: #5b626b;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+/* Dataviz palette — monochrome, matching the mockup's chart language:
+   data marks are a single cool-gray ramp with ink-black carrying the
+   highlighted/primary value. Color is NOT the identity channel here —
+   every chart pairs the ramp with a legend, direct labels, or axis
+   labels, so nothing depends on telling two grays apart.
+   Ramps validated as ordinal scales (monotone L, >=0.06 step gaps,
+   light end >=2:1 vs surface) in both modes via the dataviz validator.
+   Green/red are reserved for deltas & status only — never as series. */
+:root {
+  --viz-surface: #ffffff;
+  --viz-page: #f7f8f9;
+  --viz-ink-primary: #13161a;
+  --viz-ink-secondary: #5b626b;
+  --viz-ink-muted: #8b919a;
+  --viz-gridline: #eef0f2;
+  --viz-baseline: #e7e9ec;
+  --viz-good-text: #0f7a4d;
+
+  /* Ordinal ramp, dark -> light. Slot 1 is the highlight/primary. */
+  --viz-series-1: #13161a;
+  --viz-series-2: #363d47;
+  --viz-series-3: #5b626b;
+  --viz-series-4: #838a93;
+  --viz-series-5: #a9b0b8;
+  --viz-series-6: #c4cad1;
+  --viz-series-7: #d7dbe0;
+  --viz-series-8: #e7e9ec;
+
+  /* De-emphasised mark (unhighlighted bars) + inactive track. */
+  --viz-mark-muted: #d7dbe0;
+  --viz-track: #eef0f2;
+
+  /* Sequential ramp for the heatmap, light -> dark. */
+  --viz-seq-100: #eef0f2;
+  --viz-seq-250: #c4cad1;
+  --viz-seq-400: #939aa3;
+  --viz-seq-500: #5b626b;
+  --viz-seq-700: #13161a;
+
+  --viz-good: #0f7a4d;
+  --viz-good-bg: #eaf5ef;
+  --viz-warning: #b7791f;
+  --viz-serious: #b05c2c;
+  --viz-critical: #b23b3b;
+  --viz-critical-bg: #f8ecec;
+}
+
+.dark {
+  --viz-surface: #16191d;
+  --viz-page: #101317;
+  --viz-ink-primary: #f7f8f9;
+  --viz-ink-secondary: #b4bbc3;
+  --viz-ink-muted: #8b919a;
+  --viz-gridline: #22262c;
+  --viz-baseline: #272c33;
+  --viz-good-text: #4ab883;
+
+  --viz-series-1: #f7f8f9;
+  --viz-series-2: #d7dbe0;
+  --viz-series-3: #b4bbc3;
+  --viz-series-4: #939aa3;
+  --viz-series-5: #747b85;
+  --viz-series-6: #5b626b;
+  --viz-series-7: #454c55;
+  --viz-series-8: #363d47;
+
+  --viz-mark-muted: #363d47;
+  --viz-track: #22262c;
+
+  --viz-seq-100: #22262c;
+  --viz-seq-250: #3b424b;
+  --viz-seq-400: #666e78;
+  --viz-seq-500: #9aa1aa;
+  --viz-seq-700: #f7f8f9;
+
+  --viz-good: #4ab883;
+  --viz-good-bg: #16302a;
+  --viz-warning: #d6a44a;
+  --viz-serious: #d08a5e;
+  --viz-critical: #e08585;
+  --viz-critical-bg: #3a2222;
+}
+
+/* The mockup is strictly flat — bordered surfaces, zero elevation. */
+[data-slot="card"] {
+  box-shadow: none;
+}

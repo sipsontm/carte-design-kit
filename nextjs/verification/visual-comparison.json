@@ -1,0 +1,13 @@
+{
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "scope": "Overview content canvas only, light theme, fixed matching data",
+  "dimensionsMatch": true,
+  "width": 1280,
+  "height": 1167,
+  "changedPixels": 0,
+  "maxChannelDifference": 0,
+  "changedPixelPercent": 0
+}
